@@ -93,7 +93,11 @@ function matrixGenerator(cardValues: Item[]) {
   secondCard = false;
   cards.forEach((card) => {
     card.addEventListener("click", () => {
-      if (!card.classList.contains("matched") && !secondCard && card !== firstCard) {
+      if (
+        !card.classList.contains("matched") &&
+        !secondCard &&
+        card !== firstCard
+      ) {
         card.classList.add("flipped");
         if (!firstCard) {
           firstCard = card;
