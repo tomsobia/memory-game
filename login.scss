@@ -4,7 +4,8 @@
 }
 
 body {
-  background-image: url(https://www.agirlandagluegun.com/wp-content/uploads/2019/01/i-spy-collage.jpg);
+//   background-image: url(https://www.agirlandagluegun.com/wp-content/uploads/2019/01/i-spy-collage.jpg);
+background-color: #f4c531;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -22,7 +23,7 @@ form {
   h1 {
     animation: tracking-in-contract-bck 3s cubic-bezier(0.215, 0.61, 0.355, 1)
       alternate both;
-    color: #0015ff;
+    color:white;
     font-weight: 600;
     font-size: 5vw;
     margin: 1%;
@@ -31,11 +32,11 @@ form {
   h2 {
     font-size: 4vw;
     font-weight: 600;
-    color: #0011ff;
+    color:white;
   }
 
   input[type] {
-    background-color: #0011ff7b;
+    background-color:white;
     padding: 1%;
     width: 20%;
     border: white solid 1px;
@@ -55,14 +56,14 @@ form {
     padding: 0.3%;
     width: 10%;
     border-radius: 20px;
-    background-color: #0011fff4;
+    background-color:black;
     color: white;
   }
 
   .btn:hover {
     font-size: 700;
     color: white;
-    background-color: rgb(17, 17, 17);
+    background-color:  #f4c531;
   }
 }
 // animation
