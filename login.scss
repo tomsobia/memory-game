@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-image: url(https://www.agirlandagluegun.com/wp-content/uploads/2019/01/i-spy-collage.jpg );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    width: 100%;
+    font-family: cursive;
+}
+
+form {
+    margin: 0 auto;
+    height: 45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        animation: tracking-in-contract-bck 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) alternate both;
+        color: #0015ff;
+        font-weight: 600;
+        font-size: 5vw;
+        margin: 1%;
+    }
+
+    h2 {
+        font-size: 4vw;
+        font-weight: 600;
+        color: #0011ff;
+    }
+
+
+    input[type] {
+        background-color: #0011ff7b;
+        padding: 1%;
+        width: 20%;
+        border: white solid 1px;
+        border-radius: 20px;
+        margin: 2px;
+    }
+
+    ::placeholder {
+        font-size: 100%;
+        font-weight: 400;
+        color: rgb(255, 255, 255);
+    }
+
+    .btn {
+        font-size: 1vw;
+        margin: 1%;
+        padding: 0.3%;
+        width: 10%;
+        border-radius: 20px;
+        background-color: #0011fff4;
+        color: white;
+    }
+
+    .btn:hover {
+        font-size: 700;
+        color: white;
+        background-color: rgb(17, 17, 17);
+    }
+}
+// animation
+@-webkit-keyframes tracking-in-contract-bck {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+
+@keyframes tracking-in-contract-bck {
+    0% {
+        letter-spacing: 0.3em;
+        -webkit-transform: translateZ(400px);
+        transform: translateZ(400px);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        opacity: 1;
+    }
+}
+// responsive
+/* Media Queries */
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 8vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    input[type] {
+        width: 60%;
+    }
+
+    .btn {
+        font-size: 2.5vw;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    h1 {
+        font-size: 10vw;
+    }
+
+    h2 {
+        font-size: 8vw;
+    }
+
+    input[type] {
+        width: 80%;
+    }
+
+    .btn {
+        font-size: 3vw;
+        width: 60%;
+    }
+   
+}
