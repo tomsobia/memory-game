@@ -51,7 +51,7 @@ function Timer() {
   }
   const secondsValue = seconds < 10 ? `0${seconds}` : seconds;
   const minutesValue = minutes < 10 ? `0${minutes}` : minutes;
-  timeValue.innerHTML = `<span>Time:</span>${minutesValue}:${secondsValue}`;
+  timeValue.innerHTML = `${minutesValue}:${secondsValue}`;
 }
 
 // Calculating moves
@@ -157,10 +157,12 @@ startButton.addEventListener("click", () => {
 
 // Stop game
 stopButton.addEventListener("click", () => {
+  stopGame = true; // Set stopGame to true to indicate the game was stopped prematurely
   controls.classList.remove("hide");
   stopButton.classList.add("hide");
   startButton.classList.remove("hide");
   clearInterval(interval);
+  showResult("Game Failed"); // Display "Game Failed" message
 });
 
 function initializer() {
@@ -169,6 +171,10 @@ function initializer() {
   const cardValues = generateRandom();
   console.log(cardValues);
   matrixGenerator(cardValues);
+  minutes = 0;
+  seconds = 0;
+  timeValue.innerHTML = "<span>Time:</span>00:00";
+
 }
 
 function showResult(message: string) {

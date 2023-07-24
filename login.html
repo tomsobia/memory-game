@@ -7,13 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <form id="login" onload="randerlogin()">
+    <form id="login" onsubmit="handleAddUser(event)">
         <h1>Welcome to memory world</h1>
         <h2>Login Here</h2>
         <input type="text" name="username" id="username" placeholder="Username">
-        <input type="password" name="password" id="password" placeholder="Password">
+        <!-- <input type="password" name="password" id="password" placeholder="Password"> -->
         <button class="btn" type="submit">Login</button>
         <script src="dist/login.js"></script>
+        <script src="./dist/style.css"></script>
     </form>
 </body>
 </html>
