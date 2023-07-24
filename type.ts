@@ -16,6 +16,9 @@ let stopGame: (() => void) | undefined;
 let time: number;
 let firstCardValue;
 
+class Item {
+  constructor(public name, public image) {}
+}
 
 
 // Items array

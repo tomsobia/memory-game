@@ -6,13 +6,6 @@ class User {
 }
 
 let Userarray: User[] = [];
-
-  const Detailsstring = localStorage.getItem(`user`);
-  if (Detailsstring) {
-    const storedData: User[] = JSON.parse(Detailsstring);
-    
-  }
-export
 function handleAddUser(event){
     
     try {
