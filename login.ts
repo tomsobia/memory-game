@@ -5,16 +5,22 @@ class User {
     }
 }
 
-let Uzerarray: User[] = [];
+let Userarray: User[] = [];
 
+  const Detailsstring = localStorage.getItem(`user`);
+  if (Detailsstring) {
+    const storedData: User[] = JSON.parse(Detailsstring);
+    
+  }
+export
 function handleAddUser(event){
     
     try {
         event.preventDefault();
         const username = event.target.username.value;
         const user = new User(username);
-        Uzerarray.push(user);
-        localStorage.setItem(`user`, JSON.stringify(Uzerarray));
+        Userarray.push(user);
+        localStorage.setItem(`user`, JSON.stringify(Userarray));
         event.target.reset();
         window.location.href = "index.html";
 

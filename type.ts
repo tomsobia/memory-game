@@ -16,9 +16,7 @@ let stopGame: (() => void) | undefined;
 let time: number;
 let firstCardValue;
 
-class Item {
-  constructor(public name: string, public image: string) {}
-}
+
 
 // Items array
 const items: Item[] = [
