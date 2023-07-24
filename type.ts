@@ -20,7 +20,6 @@ class Item {
   constructor(public name, public image) {}
 }
 
-
 // Items array
 const items: Item[] = [
   new Item("java", "img/java.png"),
@@ -175,7 +174,6 @@ function initializer() {
   minutes = 0;
   seconds = 0;
   timeValue.innerHTML = "<span>Time:</span>00:00";
-
 }
 
 function showResult(message: string) {
