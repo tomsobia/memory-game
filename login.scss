@@ -4,87 +4,73 @@
 }
 
 body {
-//   background-image: url(https://www.agirlandagluegun.com/wp-content/uploads/2019/01/i-spy-collage.jpg);
-background-color: #f4c531;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  background-color:  #8594e4;
   width: 100%;
-  font-family: cursive;
+  font-family: "poppins", sans-serif;
+  background-image: url(https://i.pinimg.com/564x/e5/3b/d3/e53bd3b03844e9bf9c7fdb1ff0e356a5.jpg);
+  background-size: 400px;
+  form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color:  #430f58;
+    width: 50%;
+    margin-top: 10vw;
+  
+    h1 {
+      animation: tracking-in-contract-bck 3s cubic-bezier(0.215, 0.61, 0.355, 1)
+        alternate both;
+      color: white;
+      font-weight: 600;
+      font-size: 5vw;
+      margin-top: 2vw;
+      margin-bottom: 5vw;
+    }
+    input{
+      background-color: white;
+      padding: 1%;
+      width: 20%;
+      border: white solid 1px;
+      border-radius: 20px;
+      margin: 2px;
+    }
+  
+    ::placeholder {
+      font-size: 1.2vw;
+      font-weight: 400;
+      color: rgb(255, 255, 255);
+      color: #8594e4;
+      text-align: center;
+    }
+  
+    button {
+      font-size: 1vw;
+      margin: 1%;
+      padding: 0.3%;
+      width: 10%;
+      border-radius: 20px;
+      border-color:white;
+      color: #8594e4;
+    }
+  
+    &:hover {
+      font-size: 700;
+      color: white;
+      background: rgb(133, 148, 228);
+      background: radial-gradient(
+        circle,
+        rgba(133, 148, 228, 1) 15%,
+        rgba(213, 222, 245, 1) 100%
+      );
+    }
+  }
 }
 
-form {
-  margin: 0 auto;
-  height: 45vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
-  h1 {
-    animation: tracking-in-contract-bck 3s cubic-bezier(0.215, 0.61, 0.355, 1)
-      alternate both;
-    color:white;
-    font-weight: 600;
-    font-size: 5vw;
-    margin: 1%;
-  }
-
-  h2 {
-    font-size: 4vw;
-    font-weight: 600;
-    color:white;
-  }
-
-  input[type] {
-    background-color:white;
-    padding: 1%;
-    width: 20%;
-    border: white solid 1px;
-    border-radius: 20px;
-    margin: 2px;
-  }
-
-  ::placeholder {
-    font-size: 100%;
-    font-weight: 400;
-    color: rgb(255, 255, 255);
-  }
-
-  .btn {
-    font-size: 1vw;
-    margin: 1%;
-    padding: 0.3%;
-    width: 10%;
-    border-radius: 20px;
-    background-color:black;
-    color: white;
-  }
-
-  .btn:hover {
-    font-size: 700;
-    color: white;
-    background-color:  #f4c531;
-  }
-}
 // animation
-@-webkit-keyframes tracking-in-contract-bck {
-  0% {
-    letter-spacing: 1em;
-    -webkit-transform: translateZ(400px);
-    transform: translateZ(400px);
-    opacity: 0;
-  }
-
-  40% {
-    opacity: 0.6;
-  }
-
-  100% {
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    opacity: 1;
-  }
-}
 
 @keyframes tracking-in-contract-bck {
   0% {
@@ -104,21 +90,16 @@ form {
     opacity: 1;
   }
 }
+
+
 // responsive
-/* Media Queries */
 @media screen and (max-width: 600px) {
   h1 {
     font-size: 8vw;
   }
-
-  h2 {
-    font-size: 6vw;
-  }
-
   input[type] {
     width: 60%;
   }
-
   .btn {
     font-size: 2.5vw;
     width: 40%;
@@ -129,15 +110,9 @@ form {
   h1 {
     font-size: 10vw;
   }
-
-  h2 {
-    font-size: 8vw;
-  }
-
   input[type] {
     width: 80%;
   }
-
   .btn {
     font-size: 3vw;
     width: 60%;
