@@ -1,19 +1,16 @@
-// index.ts
-
-// Import the required DOM elements
-const moves = document.querySelector("#movesCount") as HTMLElement;
-const timeValue = document.querySelector("#time") as HTMLElement;
-const startButton = document.querySelector("#start") as HTMLButtonElement;
-const stopButton = document.querySelector("#stop") as HTMLButtonElement;
-const gameContainer = document.querySelector(".game_Container") as HTMLElement;
-const result = document.querySelector("#result") as HTMLElement;
-const controls = document.querySelector(".controls_Container") as HTMLElement;
-let cards: NodeListOf<HTMLDivElement>;
-let interval: NodeJS.Timeout;
-let firstCard: HTMLDivElement | false = false;
-let secondCard: HTMLDivElement | false = false;
-let stopGame: (() => void) | undefined;
-let time: number;
+const moves = document.querySelector("#movesCount");
+const timeValue = document.querySelector("#time");
+const startButton = document.querySelector("#start");
+const stopButton = document.querySelector("#stop");
+const gameContainer = document.querySelector(".game_Container");
+const result = document.querySelector("#result");
+const controls = document.querySelector(".controls_Container");
+let cards;
+let interval;
+let firstCard = false;
+let secondCard = false;
+let stopGame;
+let time;
 let firstCardValue;
 
 class Item {
@@ -21,7 +18,7 @@ class Item {
 }
 
 // Items array
-const items: Item[] = [
+const items = [
   new Item("java", "img/java.png"),
   new Item("c++", "img/C.png"),
   new Item("css", "img/css.webp"),
@@ -64,7 +61,7 @@ function movesCounter() {
 function generateRandom() {
   let size = 4;
   let tempArray = [...items];
-  let cardValues: Item[] = [];
+  let cardValues = [];
   size = (size * size) / 2;
   for (let i = 0; i < size; i++) {
     const randomIndex = Math.floor(Math.random() * tempArray.length);
@@ -74,7 +71,7 @@ function generateRandom() {
   return cardValues;
 }
 
-function matrixGenerator(cardValues: Item[]) {
+function matrixGenerator(cardValues) {
   const size = 4;
   gameContainer.innerHTML = "";
   cardValues = [...cardValues, ...cardValues];
@@ -101,21 +98,19 @@ function matrixGenerator(cardValues: Item[]) {
         card.classList.add("flipped");
         if (!firstCard) {
           firstCard = card;
-          firstCardValue = card.getAttribute("data-card-value") as string;
+          firstCardValue = card.getAttribute("data-card-value");
         } else {
           movesCounter();
           secondCard = card;
-          const secondCardValue = card.getAttribute(
-            "data-card-value"
-          ) as string;
-          if (firstCardValue == secondCardValue) {
+          const secondCardValue = card.getAttribute("data-card-value");
+          if (firstCardValue === secondCardValue) {
             firstCard.classList.add("matched");
             secondCard.classList.add("matched");
 
             firstCard = false;
             secondCard = false;
             winCount += 1;
-            if (winCount == Math.floor(cardValues.length / 2)) {
+            if (winCount === Math.floor(cardValues.length / 2)) {
               result.innerHTML = `<h2>You Won!</h2><h4>Moves: ${movesCount}`;
               clearInterval(interval);
               if (stopGame) {
@@ -157,12 +152,12 @@ startButton.addEventListener("click", () => {
 
 // Stop game
 stopButton.addEventListener("click", () => {
-  stopGame = true; // Set stopGame to true to indicate the game was stopped prematurely
+  stopGame = true;
   controls.classList.remove("hide");
   stopButton.classList.add("hide");
   startButton.classList.remove("hide");
   clearInterval(interval);
-  showResult("Game Failed"); // Display "Game Failed" message
+  showResult("Game Failed");
 });
 
 function initializer() {
@@ -176,7 +171,7 @@ function initializer() {
   timeValue.innerHTML = "<span>Time:</span>00:00";
 }
 
-function showResult(message: string) {
+function showResult(message) {
   result.innerHTML = `<h2>${message}</h2><h4>Moves: ${movesCount}</h4> <h4>Time: ${timeValue.innerText}</h4>`;
   controls.classList.remove("hide");
   stopButton.classList.add("hide");
