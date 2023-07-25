@@ -4,8 +4,7 @@
 }
 
 body {
-
-  background-color:  #8594e4;
+  background-color: #8594e4;
   width: 100%;
   font-family: "poppins", sans-serif;
   background-image: url(https://i.pinimg.com/564x/e5/3b/d3/e53bd3b03844e9bf9c7fdb1ff0e356a5.jpg);
@@ -15,11 +14,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background-color:  #430f58;
+    background-color: #430f58;
     width: 50%;
     margin-top: 10vw;
-  
+
     h1 {
       animation: tracking-in-contract-bck 3s cubic-bezier(0.215, 0.61, 0.355, 1)
         alternate both;
@@ -29,36 +27,31 @@ body {
       margin-top: 2vw;
       margin-bottom: 5vw;
     }
-    input{
-      background-color: white;
-      padding: 1%;
+    input {
+      padding: 1vw;
       width: 20%;
       border: white solid 1px;
       border-radius: 20px;
-      margin: 2px;
     }
-  
+
     ::placeholder {
       font-size: 1.2vw;
       font-weight: 400;
-      color: rgb(255, 255, 255);
       color: #8594e4;
       text-align: center;
     }
-  
+
     button {
       font-size: 1vw;
-      margin: 1%;
-      padding: 0.3%;
+      margin: 1vw;
+      padding: 0.3vw;
       width: 10%;
       border-radius: 20px;
-      border-color:white;
+      border-color: white;
       color: #8594e4;
     }
-  
+
     &:hover {
-      font-size: 700;
-      color: white;
       background: rgb(133, 148, 228);
       background: radial-gradient(
         circle,
@@ -68,7 +61,6 @@ body {
     }
   }
 }
-
 
 // animation
 
@@ -90,7 +82,6 @@ body {
     opacity: 1;
   }
 }
-
 
 // responsive
 @media screen and (max-width: 600px) {
