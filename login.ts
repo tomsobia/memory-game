@@ -30,4 +30,4 @@ class User {
     }
   }
   console.log(newArray)
->>>>>>> 61d457bad16ada5e1c55ca9f64a656b9d7346e6e
+
