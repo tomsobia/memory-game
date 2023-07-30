@@ -144,7 +144,7 @@ startButton.addEventListener("click", () => {
   stopButton.classList.remove("hide");
   startButton.classList.add("hide");
 
-  interval = setInterval(Timer, 1000);
+  interval = setInterval(timer, 1000);
   moves.innerHTML = `<span>Moves:</span>${movesCount}`;
 
   initializer();
@@ -177,4 +177,3 @@ function showResult(message) {
   stopButton.classList.add("hide");
   startButton.classList.remove("hide");
 }
-
