@@ -1,1 +1,1 @@
-export const {shahar} = 100;
+export const {shahar} = 200;
