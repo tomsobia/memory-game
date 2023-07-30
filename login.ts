@@ -1,4 +1,3 @@
-
 class User {
     id: string;
     constructor(public username: string, public movesCount:number,public timeValue:number ) {
