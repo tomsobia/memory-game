@@ -1,0 +1,1 @@
+const shahar = 200;
