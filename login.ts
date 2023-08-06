@@ -1,6 +1,6 @@
 class User {
     id: string;
-    constructor(public username: string, public movesCount:number,public timeValue:number ) {
+    constructor(public username: string) {
       this.id = `id-${Math.random()}`;
     }
   }
