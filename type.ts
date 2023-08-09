@@ -177,5 +177,3 @@ function showResult(message) {
   stopButton.classList.add("hide");
   startButton.classList.remove("hide");
 }
-
-
